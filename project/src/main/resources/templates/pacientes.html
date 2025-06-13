@@ -1,0 +1,29 @@
+<div th:replace="~{fragments/header}"></div>
+	<main>
+		<section class="container-users">
+	        <div th:each="paciente : ${pacientes}" class="user-card" data-aos="flip-right">
+	            <div class="user-avatar">
+	                <img class="img-users" 
+	                     src="https://firebasestorage.googleapis.com/v0/b/my-web-6e66e.appspot.com/o/img%2Fuser-icon-512x512-x23sj495.png?alt=media&token=5d2251b0-aa92-4123-81c1-fd7f30a61695" 
+	                     alt="Avatar de usuario"/>
+	            </div>
+	            <div class="user-info">
+	                <h4 class="user-name" th:text="${paciente.nombresPaciente + ' ' + paciente.apellidosPaciente}"></h4>
+	                <div class="user-detail">
+	                    <span class="detail-label"><strong>Correo:</strong></span>
+	                    <span th:text="${paciente.emailPaciente}" class="detail-value"></span>
+	                </div>
+	                <div class="user-detail">
+	                    <span class="detail-label"><strong>Teléfono:</strong></span>
+	                    <span th:text="${paciente.telefonoPaciente}" class="detail-value"></span>
+	                </div>
+	                <div class="user-detail">
+	                    <span class="detail-label"><strong>Fecha Nac.:</strong></span>
+	                    <span th:text="${paciente.nacimientoPaciente + ' años'}" class="detail-value"></span>
+	                </div>
+					<a class="btn btn-primary">Ver</a>
+	            </div>
+	        </div>
+		</section>
+	</main>
+<div th:replace="~{fragments/footer}"></div>

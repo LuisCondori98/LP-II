@@ -1,0 +1,63 @@
+<div th:replace="~{fragments/header}"></div>
+<form th:action="@{/api/medicos}" method="POST">
+    <!-- Nombres -->
+    <div class="mb-3">
+        <label for="nombresMedico" class="form-label">Nombres</label>
+        <input type="text" class="form-control" id="nombresMedico" required>
+    </div>
+    
+    <!-- Apellidos -->
+    <div class="mb-3">
+        <label for="apellidosMedico" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" id="apellidosMedico" required>
+    </div>
+    
+    <!-- Especialidad -->
+    <div class="mb-3">
+        <label for="especialidadMedico" class="form-label">Especialidad</label>
+        <select class="form-select" id="especialidadMedico" required>
+            <option value="" selected disabled>Seleccione una especialidad</option>
+            <option value="Cardiología">Cardiología</option>
+            <option value="Dermatología">Dermatología</option>
+            <option value="Pediatría">Pediatría</option>
+            <option value="Neurología">Neurología</option>
+            <option value="Otra">Otra</option>
+        </select>
+    </div>
+    
+    <!-- Dirección -->
+    <div class="mb-3">
+        <label for="direccionMedico" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="direccionMedico" required>
+    </div>
+    
+    <!-- Teléfono -->
+    <div class="mb-3">
+        <label for="telefonoMedico" class="form-label">Teléfono</label>
+        <input type="tel" class="form-control" id="telefonoMedico" required>
+    </div>
+    
+    <!-- Email -->
+    <div class="mb-3">
+        <label for="emailMedico" class="form-label">Email</label>
+        <input type="email" class="form-control" id="emailMedico" required>
+    </div>
+    
+    <!-- DNI -->
+    <div class="mb-3">
+        <label for="dniMedico" class="form-label">DNI</label>
+        <input type="number" class="form-control" id="dniMedico" required>
+    </div>
+    
+    <!-- Fecha de Nacimiento -->
+    <div class="mb-3">
+        <label for="nacimientoMedico" class="form-label">Fecha de Nacimiento</label>
+        <input type="date" class="form-control datepicker" id="nacimientoMedico" required>
+    </div>
+    
+    <div class="d-grid gap-2">
+        <input type="submit" value="Registrar medico" class="btn btn-primary" />
+        <button type="reset" class="btn btn-secondary">Limpiar Formulario</button>
+    </div>
+</form>
+<div th:replace="~{fragments/footer}"></div>

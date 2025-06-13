@@ -1,0 +1,25 @@
+<div th:replace="~{fragments/header}"></div>
+	<main>
+	  <div class="contact-page">
+	    <h1>Contáctanos</h1>
+	    <p>Estamos aquí para ayudarte. Envíanos un mensaje o utiliza la información a continuación para contactarnos.</p>
+	    
+	    <form class="contact-form" action="/send-message" method="POST" >
+	      <label for="name">Nombre:</label>
+	      <input type="text" id="name" name="name" placeholder="Tu nombre" required/>
+	      
+	      <label for="email">Correo electrónico:</label>
+	      <input type="email" id="email" name="email" placeholder="Tu correo" required/>
+	      
+	      <label for="message">Mensaje:</label>
+	      <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+	      
+	      <button type="submit">Enviar</button>
+	    </form>
+	  </div>
+	
+	  <div>
+	  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5064.0449418718445!2d-77.00059122386233!3d-12.119734143265822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7f07aacf4bd%3A0x3e1c89843c30710b!2sAv.%20Aviaci%C3%B3n%208647%2C%20Surquillo%2015038!5e1!3m2!1ses-419!2spe!4v1733836129282!5m2!1ses-419!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class='maps'></iframe>
+	  </div>
+	</main>
+<div th:replace="~{fragments/footer}"></div>
